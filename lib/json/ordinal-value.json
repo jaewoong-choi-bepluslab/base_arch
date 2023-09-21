@@ -1,0 +1,103 @@
+{
+    "resourceType": "Questionnaire",
+    "title": "Questionnaire Valueset sample",
+    "status": "draft",
+    "item": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "radio-button",
+                  "system": "http://hl7.org/fhir/questionnaire-item-control",
+                  "display": "Radio Button"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/variable",
+            "valueExpression": {
+              "name": "sumOfCourse",
+              "language": "ext/fhirpath",
+              "expression": "QuestionnaireResponse.item.value"
+            }
+          }
+        ],
+        "linkId": "Course",
+        "text": "진행 양상이 어떻나요? - Ordinal Value 예제",
+        "type": "choice",
+        "code": [
+          {
+            "code": "89261-2",
+            "system": "http://loinc.org",
+            "display": "Clinical course"
+          }
+        ],
+        "answerOption": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "value": "1"
+              }
+            ],
+            "valueCoding": {
+              "code": "61751001",
+              "display": "서서히"
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "value": "2"
+              }
+            ],
+            "valueCoding": {
+              "code": "385315009",
+              "display": "갑자기"
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "value": "3"
+              }
+            ],
+            "valueCoding": {
+              "code": "44180009",
+              "display": "반복적"
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "value": "4"
+              }
+            ],
+            "valueCoding": {
+              "code": "90734009",
+              "display": "만성적"
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "value": "5"
+              }
+            ],
+            "valueCoding": {
+              "code": "261665006",
+              "display": "모르겠음"
+            }
+          }
+        ]
+      }
+    ]
+  }
