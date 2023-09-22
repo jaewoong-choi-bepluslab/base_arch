@@ -15,7 +15,6 @@ class RestClient {
   //Dio 셋팅
   RestClient._internal() {
     _dio.options = BaseOptions(
-      baseUrl: baseUrl,
       connectTimeout: timeLimit,
       receiveTimeout: timeLimit,
       sendTimeout: timeLimit,

@@ -1,4 +1,5 @@
-import 'package:base_architecture/presentation/page/sample/sample_page.dart';
+import 'package:base_architecture/presentation/page/first_chart/p_first_chart.dart';
+
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {
@@ -7,7 +8,7 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: SamplePage(),
+      body: FirstChartPage(),
     );
   }
 }

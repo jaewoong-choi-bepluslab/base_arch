@@ -12,7 +12,9 @@ class _SampleApi implements SampleApi {
   _SampleApi(
     this._dio, {
     this.baseUrl,
-  });
+  }) {
+    baseUrl ??= 'https://jsonplaceholder.typicode.com/';
+  }
 
   final Dio _dio;
 
